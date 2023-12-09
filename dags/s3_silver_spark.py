@@ -11,7 +11,7 @@ with DAG (
 ) as dag:
     spark_submit = SparkSubmitOperator(
         task_id='spark_submit',
-        application='./supports/spark_operator.py',
+        application='/home/ec2-user/airflow/dags/eventsim/dags/supports/spark_operator.py',
         conn_id='spark_connection',
         conf={
             "spark.hadoop.fs.s3a.impl": "org.apache.hadoop.fs.s3a.S3AFileSystem",
